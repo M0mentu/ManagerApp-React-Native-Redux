@@ -11,6 +11,9 @@ class UserProfile extends Component {
         this.props.loggedIn = false;
         this.props.LogOutUser();
     }
+    GoEmployees(){
+        Actions.employeeList();
+    }
     renderEmail() {
         if(this.props.loggedIn){
         return (
@@ -23,16 +26,18 @@ class UserProfile extends Component {
     }
     render() {
         return (
-            <View>
-                <CardSection>
-                    <Button onPress={this.SignOut.bind(this)}>
+            <Card>
+                
+                <CardSection >
+                    <Button style={{flex: 1,flexDirection: 'column',justifyContent: 'flex-end'}} onPress={this.SignOut.bind(this)}>
                         Sign Out
                     </Button>
+                    <Button style={{flex: 1,flexDirection: 'column',justifyContent: 'flex-end'}} onPress={this.GoEmployees.bind(this)}>
+                        View Employees
+                    </Button>
                 </CardSection>
-                <CardSection>
-                    {this.renderEmail()}
-                </CardSection>
-            </View>
+                
+            </Card>
         );
     }
 }

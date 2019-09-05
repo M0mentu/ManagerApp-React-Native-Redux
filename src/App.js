@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { YellowBox,View } from 'react-native';
+import { YellowBox } from 'react-native';
 import { createStore,applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import reducers from './Reducers'
 import LoginForm from './components/LoginForm';
 import ReduxThunk from 'redux-thunk';
 import Router from './Router';
+
 
 
 class App extends Component {
@@ -31,9 +32,8 @@ class App extends Component {
     const store=createStore(reducers,{},applyMiddleware(ReduxThunk));
     return (
       <Provider store={store } >
-       
        <Router/>
-    
+   
       </Provider>
     );
   }

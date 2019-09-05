@@ -3,6 +3,14 @@ export const PASSWORD_CHANGED='password_changed';
 export const LOGIN_USER_SUCCESS='login_user_success';
 export const LOGIN_USER_FAIL='login_user_fail';
 export const LOGIN_USER='login_user';
+export const LOGOUT_USER='logout_user';
+export const LOGOUT_USER_SUCCESS='logout_user_success';
+export const LOGOUT_USER_FAIL='logout_user_fail';
+export const AUTO_LOGIN_USER='auto_login_user';
+export const AUTO_LOGIN_FAIL='auto_login_fail';
+
+
+
 
 export const EMPLOYEE_UPDATE='employee_update';
 export const EMLOYEE_CREATE='employee_create';
